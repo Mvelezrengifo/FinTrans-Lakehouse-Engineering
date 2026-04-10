@@ -1,28 +1,27 @@
-﻿FinTrans – End-to-End Lakehouse Engineering in Microsoft Fabric
-Overview
+﻿💳 FinTrans – Lakehouse en Microsoft Fabric
+Proyecto integral de ingeniería de datos financieros implementado en Microsoft Fabric con arquitectura Lakehouse + Spark.
 
-End-to-end financial data engineering project implemented in Microsoft Fabric using Lakehouse architecture and Spark.
+📌 Descripción
+Procesa 10.000 transacciones financieras.
 
-The project processes 10,000 financial transactions, applies data standardization rules, constructs dimensional models, and generates aggregated analytical tables.
+Aplica reglas de estandarización y limpieza de datos.
 
-Architecture Flow
+Construye modelos dimensionales y genera tablas analíticas agregadas listas para BI.
 
-CSV → Lakehouse → Spark Transformations → Dimensional Modeling → Aggregated Tables
+🏗️ Flujo de Arquitectura
+Código
+CSV → Lakehouse → Transformaciones Spark → Modelado Dimensional → Tablas Agregadas
+🧹 Procesamiento de Datos
+Estandarización de importes negativos.
 
-Data Processing
-Cleaning & Standardization
+Creación de indicadores IsCredit e IsDebit.
 
-Standardized negative transaction amounts.
+Conversión de fechas de cadena a tipo fecha.
 
-Created IsCredit and IsDebit classification flags.
+Validación de canales y tipos de transacción.
 
-Converted TransactionDate from string to date type.
-
-Validated transaction channels and transaction types.
-
-Dimensional Modeling
-
-Dimensions:
+📊 Modelado Dimensional
+Dimensiones:
 
 dim_date
 
@@ -30,40 +29,45 @@ dim_account
 
 dim_product
 
-Fact Table:
+Tabla de hechos:
 
 fact_transaction
 
-The model enables scalable financial analysis and aggregation.
+Este modelo permite análisis financiero escalable y reproducible.
 
-Aggregations Implemented
+📈 Agregaciones Implementadas
+Transacciones totales mensuales.
 
-Monthly total transactions
+Importe total de transacciones positivas mensuales.
 
-Monthly total positive transaction amount
+Top 5 productos más vendidos por importe.
 
-Top 5 products by transaction amount
+Top 5 cuentas con mayor volumen de transacciones.
 
-Top 5 accounts by transaction amount
+Distribución por tipo de transacción.
 
-Distribution by transaction type
+Distribución por canal.
 
-Distribution by channel
-
-All transformations executed using PySpark and SQL in Microsoft Fabric.
-
-Tools Used
-
+⚙️ Tecnologías Utilizadas
 Microsoft Fabric
 
-Lakehouse
+Lakehouse Architecture
 
 PySpark
 
 SQL
 
-Dimensional Modeling
+Modelado Dimensional
 
-Outcome
+✅ Resultado
+Se construyó un sistema estructurado de análisis financiero que transforma datos transaccionales crudos en tablas listas para BI, con estandarización, gobernanza y agregaciones estratégicas.
 
-Built a structured financial analytics pipeline transforming raw transactional data into analytics-ready tables.
+👤 Autor
+Mauricio Vélez Rengifo  
+Ingeniero de Datos | Desarrollador Backend
+
+GitHub: Mvelezrengifo
+
+LinkedIn: Mauricio Vélez
+
+👉 
